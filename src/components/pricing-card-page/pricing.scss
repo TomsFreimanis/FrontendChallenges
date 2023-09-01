@@ -1,0 +1,233 @@
+body {
+  color: #ffffff;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; /* This centers the content vertically */
+}
+.header {
+  background-color: #bc1e4a; /* Change this to your desired red color */
+  color: white; /* Text color inside the red box */
+  padding: 0; /* Adjust padding as needed */
+  margin: 0;
+  text-align: center; /* Center-align the text */
+  width: 25.75rem; /* Adjust width using rem units */
+  height: 6.75rem; /* Adjust height using rem units */
+  border-radius: 8px; /* Add rounded corners if desired */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin-top: 0.625rem; /* 25px in rem units */
+    margin-bottom: 0.625rem; /* 25px in rem units */
+  }
+  h5 {
+    .header h5 {
+      margin-top: 0.625rem; /* 25px in rem units */
+      margin-bottom: 0.625rem; /* 25px in rem units */
+    }
+  }
+}
+
+.header p,
+.header h5 {
+  margin: 0.625rem 0; /* 25px top and bottom, 0 left and right, 10px between each other */
+  font-family: "Open Sans", sans-serif;
+}
+/* ...previous styles... */
+
+.plan-selection {
+  text-align: center; /* Center-align the h3 element */
+  margin-top: 139px; /* Adjust the margin-top as needed to separate it from the red box */
+
+  h3 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+}
+
+/* Add this to your pricing.scss file */
+
+.billing-toggle {
+  display: flex;
+
+  align-items: center; /* Vertically center items */
+}
+
+.billing-option {
+  margin: 0 10px; /* Add spacing between text and button */
+}
+
+.button {
+  background-color: #bc1e4a; /* Red background color */
+
+  border: none; /* Remove the border */
+  width: 60px; /* Adjust the button width */
+  height: 32px; /* Adjust the button height */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none; /* Remove the default outline */
+  position: relative; /* Position for the circle */
+  border-radius: 20px; /* Remove border radius */
+}
+
+.circle {
+  background-color: #ffffff; /* White circle background color */
+  border-radius: 50%; /* Makes the circle circular */
+  width: 23px; /* Adjust the circle width */
+  height: 23px; /* Adjust the circle height */
+  position: absolute; /* Position the circle absolutely within the button */
+  transition: transform 0.3s ease; /* Add a smooth transition */
+  transform: translateX(-14px); /* Initially, the circle is at the left */
+}
+
+/* Add styles for the active button */
+.button.active .circle {
+  transform: translateX(15px); /* Move the circle to the right when active */
+}
+
+.bill-container {
+  display: flex;
+  margin-bottom: 40px;
+  p {
+    margin: 8px;
+  }
+}
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cards-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 23.4rem;
+  height: 38.5rem;
+  background-color: #22262c;
+  border-radius: 10px;
+
+  h5 {
+    font-size: 25px;
+    font-weight: 900;
+    margin: 0;
+    margin-top: 37px;
+  }
+  h2 {
+    margin-top: 0;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .h2mid {
+    font-size: 56px;
+  }
+}
+
+/* Add this to your SCSS file */
+
+ul {
+  list-style-type: disc; /* Use disc for bullet points */
+
+  padding-left: 20px; /* Add some left padding to create a gap between li items */
+}
+li::marker {
+  color: #bc1e4a; /* Set the color of the bullet points to #BC1E4A */
+}
+li {
+  margin-bottom: 15px; /* Add margin between li items */
+}
+
+/* Add this to your SCSS file */
+
+.buttons {
+  width: 243px;
+  height: 54px;
+  border: 2px solid #bc1e4a; /* Set the border color */
+  background: none; /* No background color */
+  color: #ffffff; /* Text color */
+  font-size: 16px; /* Adjust font size as needed */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* Remove underlines for links */
+  border-radius: 6px; /* Add rounded corners if desired */
+  margin-bottom: 35px;
+}
+
+.buttons:hover {
+  background: #bc1e4a; /* Background color on hover */
+  color: #ffffff; /* Text color on hover */
+  transition: background-color 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.buttons2 {
+  width: 243px;
+  height: 54px;
+  background: #bc1e4a; /* No background color */
+  color: #ffffff; /* Text color */
+  font-size: 16px; /* Adjust font size as needed */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* Remove underlines for links */
+  border-radius: 6px; /* Add rounded corners if desired */
+  margin-bottom: 35px;
+}
+.buttons2:hover {
+  background: #ffffff; /* Background color on hover */
+  color: #bc1e4a; /* Text color on hover */
+  transition: background-color 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.span {
+  font-size: 22px;
+}
+
+/* Default styles for larger screens */
+.element {
+  font-size: 18px;
+}
+
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media screen and (max-width: 768px) {
+  .element {
+    font-size: 16px; /* Adjust styles for smaller screens */
+  }
+  .cards {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.sel {
+  width: 297px;
+  height: 65px;
+  color: #ffffff;
+  background: none;
+  font-size: 20px;
+  background-color: none;
+  border: 1px solid #3b3a3a;
+}
+
+.redp {
+  color: #bc1e4a;
+  margin-left: -100px;
+  margin-top: 0;
+  
+}
